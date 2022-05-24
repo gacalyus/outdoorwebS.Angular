@@ -1,0 +1,59 @@
+<div class="container genaricContainer">
+  <h2 class="my-5" *ngIf="websites; else nowebsite">
+    {{ title }}
+  </h2>
+  <ng-template #nowebsite>
+    <h2 class="my-5">
+      Outdoor Ekipman Satın Almak İçin Listelenecek Site Yoktur
+    </h2>
+  </ng-template>
+  <span class="d-flex justify-content-center my-5 p-4 home-img">
+    <img
+      width="380"
+      src="https://cdn.pixabay.com/photo/2018/03/28/04/02/logo-3268177_1280.png"
+    />
+  </span>
+
+  <h3>Açık Teçhizat Mega Siteleri</h3>
+
+  <div class="row my-5" *ngFor="let website of websites">
+    <div class="col-12">
+      <h5 class="mb-4">{{ website.id }} . {{ website.title }}</h5>
+    </div>
+    <div class="col-9">
+      <p><span class="boldText">Nakliye:</span> {{ website.shipping }}</p>
+      <p>
+        <span class="boldText">İade politikası:</span>{{ website.returnPolicy }}
+      </p>
+      <p>
+        <span class="boldText">Uluslararası nakliye:</span>
+        {{ website.internationalShipping }}
+      </p>
+      <p><span class="boldText">Neyi seviyoruz:</span> {{ website.like }}</p>
+      <p><span class="boldText">Yapmadıklarımız: </span> {{ website.dont }}</p>
+    </div>
+    <div class="col-3">
+      <img width="200" src="{{ website.src }}" />
+    </div>
+    <div class="col-12">
+      Seattle merkezli REI Co-op, açık hava mağazalarının kralıdır ve
+      envanterinin büyük çoğunluğu çevrimiçi olarak mevcuttur. Sırt çantalı
+      çadırlardan yürüyüş botlarına ve dağ bisikletlerine kadar her şey için
+      REI'nin taşımadığı pek çok ürün kategorisi veya spor bulamazsınız. Ek
+      olarak, teknik dış giyimden dağ bisikletlerine kadar şirket içi donanım
+      yelpazesi genişlemeye ve bizi etkilemeye devam ediyor (2021 için, Flash ve
+      Traverse botlarıyla yürüyüş ayakkabısı dünyasına bile girdiler).
+      Müşteriler, REI'nin temettü programını (üyeler yıllık yüzde 10 temettü
+      alırlar) ve cömert iade politikasını sever ve REI.com, teslim alma için
+      mağazalarına ücretsiz gönderim sunar. Son olarak, REI'nin 39 eyalette ve
+      Columbia Bölgesi'nde 168 tuğla-harç mağazası var ve bu kesinlikle bir
+      artı.
+
+      <a target="_blank" href="{{ website.url }}">
+        <button type="button" class="btn mt-3 btnLink">
+          {{ website.title }} 'u ziyaret edin
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

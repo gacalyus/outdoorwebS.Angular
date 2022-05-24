@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+}

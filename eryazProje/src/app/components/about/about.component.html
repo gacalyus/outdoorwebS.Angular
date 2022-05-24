@@ -1,0 +1,44 @@
+<div class="container w-50 genaricContainer">
+  <h2 class="aboutTitle">Hakkımızda</h2>
+  <span class="d-flex justify-content-center mt-4 mb-5">
+    <img
+      width="760"
+      src="https://www.switchbacktravel.com/sites/default/files/image_fields/About%20SBT/Bikepacking%20Mongolia%27s%20Khangai%20Traverse%20%28pit%20stop%20at%20village%20store%29.jpg"
+    />
+  </span>
+
+  <p class="mb-5">
+    Outdoor, açık havayı sevenler için önde gelen çevrimiçi kaynaktır. Sitede üç
+    ana içerik alanını ele alıyoruz: dış mekan malzemeleri (ürün kategorilerini
+    ve derinlemesine incelemeleri kapsayan özetler), macera seyahati (yakın ve
+    uzak yerler hakkında anlatılar ve bilgiler) ve fotoğrafçılık (teknik
+    parçalardan röportajlara). Odak noktamız yüksek kaliteli yazı ve resimlerdir
+    ve site reklamsızdır ve en keyifli okuyucu deneyimi için temiz ve ilham
+    verici olacak şekilde tasarlanmıştır. Özgünlük, en ciddiye aldığımız bir
+    şeydir. Kurucu David Wilkinson, siteyi baştan başlattı ve bu nedenle, dış
+    etkiler olmadan tam olarak ne istediğimizi karşılıyoruz. Gelirimizin çoğu
+    bağlı kuruluş bağlantılarından gelir, ancak her zaman tam editoryal
+    bağımsızlığı koruyoruz ve hiçbir zaman üreticilerden incelemeler için
+    herhangi bir finansal tazminat almıyoruz ( içeriğimiz ve sürecimiz hakkında
+    daha fazla bilgiyi aşağıda bulabilirsiniz). Ve devam eden büyümeye rağmen,
+    site özünde küçük kalıyor ve yerel patikalarımıza sıkı sıkıya bağlı.
+    Editörlerimiz ve dişli testçilerimiz, hepsi dağların yakınında yaşıyor ve
+    mümkün olduğunca açık havadalar çünkü onu seviyorlar ve yaşıyorlar.
+  </p>
+
+  <h4 class="my-3">Personel ve Katkıda Bulunanlar</h4>
+
+  <div class="row" *ngFor="let personel of personels">
+    <div class="col-12">
+      <h5 class="my-4">{{ personel.name }}</h5>
+    </div>
+    <div class="col-6">
+      {{ personel.about }}
+    </div>
+    <div class="row-3">
+      <span>
+        <img width="380" src="{{ personel.picture }}" />
+      </span>
+    </div>
+  </div>
+</div>
